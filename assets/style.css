@@ -1,8 +1,12 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
 body {
     background-color: brown;
 }
 
-.buffy_pics {
+/* .buffy_pics {
     border-radius: 8px;
     padding: 0 6px;
     width: 24.99999%;
@@ -20,3 +24,29 @@ body {
       width: 100%;
     }
   }
+
+   */
+
+   .buffy_pics {
+    border-radius: 8px;
+    padding: 0 6px;
+    width: 100%; /* Set the initial width to 100% */
+    max-width: 100%; /* Ensure images don't exceed their original width */
+    height: auto; /* Maintain aspect ratio */
+    display: flex; /* Ensure images behave as block elements */
+    margin-bottom: 2px; /* Add some space between images */
+}
+
+    @media only screen and (min-width: 500px) {
+    .buffy_pics {
+        width: 50%; /* Set width to 50% on screens larger than 500px */
+        max-width: 50%;
+    }
+}
+
+    @media only screen and (min-width: 700px) {
+    .buffy_pics {
+        width: 25%; /* Set width to 25% on screens larger than 700px */
+        max-width: 25%;
+    }
+}
